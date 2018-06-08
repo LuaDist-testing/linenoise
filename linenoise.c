@@ -2,7 +2,7 @@
  */
 
 /*
-* Copyright (c) 2011-2012 Rob Hoelz <rob@hoelz.ro>
+* Copyright (c) 2011-2015 Rob Hoelz <rob@hoelz.ro>
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
@@ -27,6 +27,12 @@
 #include "linenoise.h"
 
 #define LN_COMPLETION_TYPE "linenoiseCompletions*"
+
+#ifdef _WIN32
+#define LN_EXPORT __declspec(dllexport)
+#else
+#define LN_EXPORT extern
+#endif
 
 static int completion_func_ref;
 static lua_State *completion_state;
@@ -179,7 +185,7 @@ luaL_Reg linenoise_funcs[] = {
     { NULL, NULL }
 };
 
-int luaopen_linenoise(lua_State *L)
+LN_EXPORT int luaopen_linenoise(lua_State *L)
 {
     lua_newtable(L);
 
