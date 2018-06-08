@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = 'linenoise'
-version = '0.7-1'
+version = '0.8-1'
 -- LuaDist source
 source = {
-  tag = "0.7-1",
+  tag = "0.8-1",
   url = "git://github.com/LuaDist-testing/linenoise.git"
 }
 -- Original source
 -- source = {
---   url = 'https://github.com/hoelzro/lua-linenoise/archive/0.07.tar.gz',
---   dir = 'lua-linenoise-0.07',
+--   url = 'https://github.com/hoelzro/lua-linenoise/archive/0.8.tar.gz',
+--   dir = 'lua-linenoise-0.8',
 -- }
 description = {
   summary  = 'A binding for the linenoise command line library',
